@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SuperJoystick 🎮</title>
+
+<!-- Íconos -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+/* --- ESTILO GENERAL --- */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0a0f;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* --- ENCABEZADO --- */
+header {
+  background: linear-gradient(90deg, #1a1a2e, #3a0ca3);
+  border-bottom: 3px solid #ff2e63;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 2px 15px #ff2e6370;
+}
+header h1 {
+  margin: 0;
+  color: #ff2e63;
+  text-shadow: 0 0 10px #ff2e63;
+  font-size: 2em;
+}
+header p {
+  margin: 8px 0 0;
+  font-size: 1.1em;
+  color: #ddd;
+  font-style: italic;
+}
+
+/* --- MENÚ --- */
+nav {
+  background-color: #111;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+nav a {
+  color: #e84545;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+/* --- SECCIONES --- */
+section {
+  padding: 50px 20px;
+  text-align: center;
+}
+h2 {
+  color: #ff2e63;
+  margin-bottom: 20px;
+  text-shadow: 0 0 8px #ff2e63;
+}
+
+/* --- LLAMADO DE ATENCIÓN --- */
+.llamado {
+  background-color: #280000;
+  border: 1.5px solid #ff4f80;
+  border-radius: 12px;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 25px 20px;
+  box-shadow: 0 0 20px #ff4f8055;
+}
+.llamado h3 {
+  color: #ff4f80;
+  font-size: 1.4em;
+}
+.llamado p {
+  color: #f8d7da;
+  line-height: 1.6;
+}
+
+/* --- FORMULARIO GENERAL --- */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 10px;
+  border: 1px solid #ff2e63;
+  box-shadow: 0 0 15px #ff2e6380;
+}
+input, textarea, select {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: #111;
+  color: #fff;
+}
+
+/* --- BOTONES --- */
+button {
+  background: #ff2e63;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+button:hover {
+  background: #ff4f80;
+}
+
+/* --- RESEÑAS --- */
+.reseña {
+  background: #1a1a1a;
+  border: 1px solid #ff2e63;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 600px;
+  box-shadow: 0 0 10px #ff2e6355;
+}
+.reseña img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+/* --- REDES SOCIALES --- */
+.social {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.social a {
+  font-size: 1.8em;
+  text-decoration: none;
+}
+.fa-facebook { color: #1877f2; }
+.fa-instagram { color: #e4405f; }
+.fa-whatsapp { color: #25d366; }
+
+/* --- MAPA --- */
+.mapa iframe {
+  width: 90%;
+  max-width: 600px;
+  height: 300px;
+  border: 2px solid #ff2e63;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #ff2e6380;
+}
+
+/* --- BANNER --- */
+#banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #b30000;
+  color: white;
+  padding: 12px;
+  text-align: center;
+  box-shadow: 0 -2px 10px #ff000060;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>SuperJoystick</h1>
+  <p>Donar también es parte del juego 🎮</p>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#noticias">Noticias</a>
+  <a href="#reseñas">Reseñas</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<section id="inicio">
+  <h2>Bienvenido a SuperJoystick</h2>
+  <p>Explora el mundo gamer con reseñas, noticias y contenido hecho para jugadores como tú.</p>
+
+<div class="llamado">
+    <h3>💉 ¿Sabías que puedes ser un héroe real?</h3>
+    <p>
+      Con una sola donación de sangre puedes salvar hasta tres vidas.  
+      ¿Cuándo fue la última vez que ayudaste de esta manera?  
+      En la vida, igual que en los videojuegos,  
+      <strong>los verdaderos héroes actúan</strong>.
+    </p>
+  </div>
+</section>
+
+<section id="noticias">
+  <h2>Últimas Noticias</h2>
+  <p>Muy pronto habrá reseñas exclusivas y análisis detallados.</p>
+</section>
+
+<section id="reseñas">
+  <h2>Reseñas de Videojuegos</h2>
+
+  <button onclick="document.getElementById('form-reseña').style.display='block'">
+    ➕ Agregar reseña
+    
+    
+  </button>
+
+  <form id="form-reseña" style="display:none; margin-top:20px;">
+    <input type="text" id="titulo" placeholder="Título del juego" required>
+
+    <select id="consola">
+      <option value="Xbox One">Xbox One</option>
+      <option value="Xbox Series S/X">Xbox Series S/X</option>
+      <option value="PlayStation 4">PlayStation 4</option>
+      <option value="PlayStation 5">PlayStation 5</option>
+      <option value="PC">PC</option>
+      <option value="Todas">Todas</option>
+    </select>
+
+    <label style="text-align:left;">Imagen del juego:</label>
+    <input type="file" id="imagen" accept="image/*">
+
+    <label>Calificación:</label>
+    <select id="estrellas">
+      <option value="⭐">1 ⭐</option>
+      <option value="⭐⭐">2 ⭐⭐</option>
+      <option value="⭐⭐⭐">3 ⭐⭐⭐</option>
+      <option value="⭐⭐⭐⭐">4 ⭐⭐⭐⭐</option>
+      <option value="⭐⭐⭐⭐⭐">5 ⭐⭐⭐⭐⭐</option>
+    </select>
+
+    <textarea id="texto" rows="4" placeholder="Escribe tu reseña..." required></textarea>
+
+    <button type="button" onclick="agregarReseña()">Publicar reseña</button>
+  </form>
+
+<!-- 🔎 MENÚ DE BÚSQUEDA -->
+<div id="buscador" style="margin-top:30px; max-width:600px; margin:auto;">
+  <input type="text" id="buscar-titulo" placeholder="Buscar por título..." style="width:100%; padding:10px; margin-bottom:10px;">
+
+  <select id="buscar-consola" style="width:100%; padding:10px;">
+    <option value="">Todas las consolas</option>
+    <option value="Xbox One">Xbox One</option>
+    <option value="Xbox Series S/X">Xbox Series S/X</option>
+    <option value="PlayStation 4">PlayStation 4</option>
+    <option value="PlayStation 5">PlayStation 5</option>
+    <option value="PC">PC</option>
+  </select>
+
+  <button onclick="filtrarReseñas()" style="width:100%; margin-top:10px;">
+    Buscar
+  </button>
+</div>
+  <div id="contenedor-reseñas"></div>
+</section>
+
+<section id="contacto">
+  <h2>Contacto</h2>
+
+  <form>
+    <input type="text" placeholder="Tu nombre" required>
+    <input type="email" placeholder="Tu correo" required>
+    <textarea rows="4" placeholder="Tu mensaje..." required></textarea>
+    <button>Enviar</button>
+  </form>
+
+  <div class="social">
+    <a href="https://www.facebook.com/share/17Qvf4ivfj/" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://www.instagram.com/royylll_?igsh=dGcxNDFzaXFqMnI4" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://wa.me/5533754501" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+  </div>
+
+  <div class="mapa" style="margin-top:20px;">
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.1483027797614!2d-99.16878572583327!3d19.414987345506514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1ffe2f8b6d5e1%3A0x70b4957332b26738!2sAngel%20de%20la%20Independencia!5e0!3m2!1ses!2smx!4v1700000000000"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<div id="banner">
+  🎮 Los héroes actúan en la vida real… ¡Dona sangre! ❤️
+</div>
+
+<script>
+function agregarReseña() {
+
+  const titulo = document.getElementById("titulo").value;
+  const consola = document.getElementById("consola").value;
+  const estrellas = document.getElementById("estrellas").value;
+  const texto = document.getElementById("texto").value;
+  const imagenInput = document.getElementById("imagen").files[0];
+
+  const cont = document.getElementById("contenedor-reseñas");
+
+  const reseña = document.createElement("div");
+  reseña.classList.add("reseña");
+
+  let imgHTML = "";
+  if (imagenInput) {
+    const url = URL.createObjectURL(imagenInput);
+    imgHTML = `<img src="${url}">`;
+  }
+
+  reseña.innerHTML = `
+    ${imgHTML}
+    <h3>${titulo}</h3>
+    <p><strong>Consola:</strong> ${consola}</p>
+    <p><strong>Calificación:</strong> ${estrellas}</p>
+    <p>${texto}</p>
+  `;
+
+  cont.appendChild(reseña);
+}
+</script>
+
+</body>
+</html>
